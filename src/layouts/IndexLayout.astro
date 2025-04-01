@@ -1,5 +1,7 @@
 ---
-import NavBar from "../components/NavBar.vue";
+import NavBar from '../components/NavBar.vue';
+import Footer from '../components/Footer.vue';
+
 
 interface Props {
   title: string;
@@ -21,6 +23,7 @@ const { title } = Astro.props;
   <body>
     <NavBar client:load />
     <slot />
+    <Footer client:load />
   </body>
 </html>
 <style is:global></style>
