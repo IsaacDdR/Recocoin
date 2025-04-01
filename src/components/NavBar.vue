@@ -1,8 +1,8 @@
 <template>
-    <header class="bg-gray-900">
+    <header class="bg-gray-800">
       <div class="flex items-center justify-between px-4 py-3">
         <div>
-        <img class="h-8" src="src/assets/svg/recocoin-logo.svg" alt="Workcation">
+        <img class="h-12" src="src/assets/svg/recocoin-logo.svg" alt="Workcation">
         </div>
         <div>
           <button @click="isOpen = !isOpen" type="button" class="block text-gray-500 hover:text-white focus:text-white focus:outline-none">
@@ -14,9 +14,10 @@
         </div>
       </div>
       <div :class="isOpen ? 'block' : 'hidden'" class="px-2 pt-2 pb-4">
-        <a href="#" class="block px-2 py-1 text-white font-semibold rounded hover:bg-gray-800">List your property</a>
-        <a href="#" class="mt-1 block px-2 py-1 text-white font-semibold rounded hover:bg-gray-800">Trips</a>
-        <a href="#" class="mt-1 block px-2 py-1 text-white font-semibold rounded hover:bg-gray-800">Messages</a>
+        <a href="#" class="block px-2 py-1 text-white font-semibold rounded hover:bg-gray-800">Inicio</a>
+        <a href="#" class="mt-1 block px-2 py-1 text-white font-semibold rounded hover:bg-gray-800">Productos</a>
+        <a href="#" class="mt-1 block px-2 py-1 text-white font-semibold rounded hover:bg-gray-800">Galería</a>
+        <a href="#" class="mt-1 block px-2 py-1 text-white font-semibold rounded hover:bg-gray-800">Contacto</a>
       </div>
     </header>
   </template>
