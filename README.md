@@ -1,5 +1,4 @@
-# Astro Starter Kit: Basics
-
+RECOCOIN
 ```sh
 npm create astro@latest -- --template basics
 ```
