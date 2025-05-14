@@ -6,5 +6,7 @@ import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [vue(), tailwind()]
+  integrations: [vue(), tailwind()],
+  output: 'static',
+  base: '/Recocoin', // Replace with your repository name
 });
