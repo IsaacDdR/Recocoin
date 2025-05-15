@@ -7,11 +7,13 @@
         </div>
         
         <!-- Desktop Navigation -->
-        <nav class="hidden sm:flex sm:items-center sm:space-x-8">
-          <a href="#" class="text-gray-100 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-150 ease-in-out hover:bg-gray-700/50">Inicio</a>
-          <a href="#" class="text-gray-100 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-150 ease-in-out hover:bg-gray-700/50">Productos</a>
-          <a href="#" class="text-gray-100 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-150 ease-in-out hover:bg-gray-700/50">Galería</a>
-          <a href="#" class="text-gray-100 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-150 ease-in-out hover:bg-gray-700/50">Contacto</a>
+        <nav class="hidden sm:flex flex-1 justify-evenly max-w-4xl mx-auto">
+          <a href="#" class="text-gray-100 hover:text-white px-6 py-2 rounded-md text-base font-medium transition duration-150 ease-in-out hover:bg-gray-700/50">Productos</a>
+          <a href="#" class="text-gray-100 hover:text-white px-6 py-2 rounded-md text-base font-medium transition duration-150 ease-in-out hover:bg-gray-700/50">Sectores</a>
+          <a href="#" class="text-gray-100 hover:text-white px-6 py-2 rounded-md text-base font-medium transition duration-150 ease-in-out hover:bg-gray-700/50">Experiencia</a>
+          <a href="#" class="text-gray-100 hover:text-white px-6 py-2 rounded-md text-base font-medium transition duration-150 ease-in-out hover:bg-gray-700/50">Servicios</a>
+          <a href="#" class="text-gray-100 hover:text-white px-6 py-2 rounded-md text-base font-medium transition duration-150 ease-in-out hover:bg-gray-700/50">Referencias</a>
+          <a href="#" class="text-gray-100 hover:text-white px-6 py-2 rounded-md text-base font-medium transition duration-150 ease-in-out hover:bg-gray-700/50">Empresa</a>
         </nav>
 
         <!-- Mobile menu button -->

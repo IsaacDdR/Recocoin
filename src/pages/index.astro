@@ -6,77 +6,59 @@ import IndexLayout from "../layouts/IndexLayout.astro";
   <main>
     <!--HERO SECTION -->
     <section
-      class="max-w-screen-2xl m-auto w-full grid grow gap-4 px-0 sm:px-0 md:grid-cols-2 md:flex-row lg:gap-6 lg:px-0 xl:px-0"
+      class="relative w-full min-h-[500px] flex items-center justify-center bg-cover bg-center"
+      style="background-image: url('/Recocoin/assets/img/cocina-header.jpg');"
     >
+      <div class="absolute inset-0 bg-gray-900/70"></div>
       <div
-        class="flex flex-1 flex-col items-start gap-12 pb-6 md:my-20 lg:my-44 lg:pb-0 pl-3 sm:p-8 lg:pl-16 xl:pl-32"
+        class="relative z-10 max-w-2xl mx-auto px-6 py-20 flex flex-col items-center"
       >
-        <div class="flex max-w-lg flex-col gap-6">
-          <h3
-            class="text-3xl font-semibold text-slate-950 md:text-4xl lg:text-5xl"
+        <div
+          class="bg-gray-900/60 backdrop-blur-md rounded-2xl p-8 w-full text-center shadow-xl"
+        >
+          <h1
+            class="text-white font-bold text-4xl sm:text-5xl lg:text-6xl leading-tight mb-4 drop-shadow-lg"
           >
-            REFRIGERACIÓN COMERCIAL <br /> Y COCINAS INDUSTRIALES
-          </h3>
-          <p class="text-lg font-normal leading-7 text-slate-500">
-            Tu aliado en refrigeración comercial y cocinas industriales. <br />
-            Ofrecemos equipos de alta calidad, adaptados a las necesidades de tu
-            negocio para que funcione con máxima precisión y eficiencia.
+            Infraestructura térmica para la industria gastronómica
+          </h1>
+          <p class="text-lg font-medium text-gray-200 mt-2 drop-shadow mb-6">
+            Diseñamos y equipamos cocinas industriales y sistemas de
+            refrigeración con precisión y rendimiento garantizados.
           </p>
-        </div>
-        <div class="flex gap-4">
-          <button
-            type="button"
-            aria-disabled="false"
-            class="group inline-flex items-center justify-center whitespace-nowrap rounded-lg py-2 align-middle text-sm font-semibold leading-none transition-all duration-300 ease-in-out disabled:cursor-not-allowed bg-blue-700 stroke-white px-6 text-white hover:bg-blue-950 h-[42px] min-w-[42px] gap-2 disabled:bg-slate-100 disabled:stroke-slate-400 disabled:text-slate-400 disabled:hover:bg-slate-100"
-          >
-            <div>Contacto</div>
-          </button>
-          <button
-            type="button"
-            aria-disabled="false"
-            class="group inline-flex items-center justify-center whitespace-nowrap rounded-lg py-2 align-middle text-sm font-semibold leading-none transition-all duration-300 ease-in-out disabled:cursor-not-allowed stroke-blue-700 px-2 text-blue-700 h-[42px] min-w-[42px] gap-2 disabled:stroke-slate-400 disabled:text-slate-400 hover:stroke-blue-950 hover:text-blue-950"
-          >
-            <div>Productos</div>
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="#1D4ED8"
-              stroke-width="1.5"
-              xmlns="http://www.w3.org/2000/svg"
-              class="size-6 stroke-inherit"
+          <div class="flex gap-4 mt-4 justify-center">
+            <button
+              type="button"
+              aria-disabled="false"
+              class="group inline-flex items-center justify-center rounded-lg px-6 py-2 h-[42px] min-w-[120px] text-sm font-semibold leading-none transition-all duration-300 ease-in-out bg-gray-900 text-white hover:bg-gray-800 focus:outline-none"
             >
-              <path
-                d="M11 16L15 12L11 8"
-                stroke-linecap="round"
-                stroke-linejoin="round"></path>
-              <circle cx="12" cy="12" r="9"></circle>
-            </svg>
-          </button>
+              Contacto
+            </button>
+            <button
+              type="button"
+              aria-disabled="false"
+              class="group inline-flex items-center justify-center rounded-lg px-6 py-2 h-[42px] min-w-[120px] text-sm font-semibold leading-none transition-all duration-300 ease-in-out bg-white text-gray-900 border border-gray-300 hover:bg-gray-100 focus:outline-none"
+            >
+              Productos
+            </button>
+          </div>
         </div>
-      </div>
-      <div
-        class="order-first flex w-full flex-1 items-center justify-center bg-slate-50 md:py-28 md:order-last lg:py-0"
-      >
-        <img src="/Recocoin/assets/img/cocina-header.jpg" alt="Cocina header" />
       </div>
     </section>
 
     <!--BENEFICIOS -->
     <section class="text-gray-600 body-font">
-      <div class="container px-5 py-24 mx-auto">
+      <div class="container px-5 py-12 lg:py-16 mx-auto">
+        <!--
         <h1
-          class="sm:text-4xl text-3xl font-medium title-font text-center text-gray-900 mb-20"
+          class="text-3xl font-medium title-font text-center text-gray-900 mb-20 lg:sm:text-5xl lg:text-4xl lg:font-bold lg:mb-24"
         >
           Beneficios que marcan la diferencia
         </h1>
-        <div
-          class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6"
-        >
-          <div class="p-4 md:w-1/3 flex">
+        -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-y-10 gap-x-8">
+          <div class="px-4 py-6 flex lg:px-6 lg:py-6">
             <div
-              class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-blue-100 text-blue-500 mb-4 flex-shrink-0"
+              class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-gray-800 text-gray-300 mb-4 flex-shrink-0 text-xl lg:w-20 lg:h-20 lg:mb-6 lg:text-3xl"
             >
               <svg
                 fill="none"
@@ -90,19 +72,21 @@ import IndexLayout from "../layouts/IndexLayout.astro";
                 <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
               </svg>
             </div>
-            <div class="flex-grow pl-6">
-              <h2 class="text-gray-900 text-lg title-font font-medium mb-2">
+            <div class="flex-grow pl-6 lg:pl-8">
+              <h2
+                class="text-gray-900 text-lg title-font font-medium mb-2 lg:text-2xl lg:font-bold lg:mb-4"
+              >
                 Calidad y Durabilidad:
               </h2>
-              <p class="leading-relaxed text-base">
+              <p class="leading-relaxed text-base lg:text-lg">
                 Equipos diseñados para un rendimiento eficiente y una larga vida
                 útil.
               </p>
             </div>
           </div>
-          <div class="p-4 md:w-1/3 flex">
+          <div class="px-4 py-6 flex lg:px-6 lg:py-6">
             <div
-              class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-blue-100 text-blue-500 mb-4 flex-shrink-0"
+              class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-gray-800 text-gray-300 mb-4 flex-shrink-0 text-xl lg:w-20 lg:h-20 lg:mb-6 lg:text-3xl"
             >
               <svg
                 fill="none"
@@ -119,19 +103,21 @@ import IndexLayout from "../layouts/IndexLayout.astro";
                 ></path>
               </svg>
             </div>
-            <div class="flex-grow pl-6">
-              <h2 class="text-gray-900 text-lg title-font font-medium mb-2">
+            <div class="flex-grow pl-6 lg:pl-8">
+              <h2
+                class="text-gray-900 text-lg title-font font-medium mb-2 lg:text-2xl lg:font-bold lg:mb-4"
+              >
                 Asesoría Personalizada:
               </h2>
-              <p class="leading-relaxed text-base">
+              <p class="leading-relaxed text-base lg:text-lg">
                 Te guiamos en cada paso para que encuentres la mejor solución
                 adaptada a tus necesidades.
               </p>
             </div>
           </div>
-          <div class="p-4 md:w-1/3 flex">
+          <div class="px-4 py-6 flex lg:px-6 lg:py-6">
             <div
-              class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-blue-100 text-blue-500 mb-4 flex-shrink-0"
+              class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-gray-800 text-gray-300 mb-4 flex-shrink-0 text-xl lg:w-20 lg:h-20 lg:mb-6 lg:text-3xl"
             >
               <svg
                 fill="none"
@@ -146,11 +132,13 @@ import IndexLayout from "../layouts/IndexLayout.astro";
                 <circle cx="12" cy="7" r="4"></circle>
               </svg>
             </div>
-            <div class="flex-grow pl-6">
-              <h2 class="text-gray-900 text-lg title-font font-medium mb-2">
+            <div class="flex-grow pl-6 lg:pl-8">
+              <h2
+                class="text-gray-900 text-lg title-font font-medium mb-2 lg:text-2xl lg:font-bold lg:mb-4"
+              >
                 Garantía:
               </h2>
-              <p class="leading-relaxed text-base">
+              <p class="leading-relaxed text-base lg:text-lg">
                 Nos aseguramos de que tus equipos funcionen siempre de manera
                 óptima, brindándote tranquilidad y respaldo en cada compra.
               </p>
@@ -159,152 +147,69 @@ import IndexLayout from "../layouts/IndexLayout.astro";
         </div>
       </div>
     </section>
-
     <!--INTRO MARCAS -->
-    <section class="text-gray-600 body-font">
-      <div class="container px-5 py-24 mx-auto">
-        <div class="flex flex-col">
-          <div class="h-1 bg-gray-200 rounded overflow-hidden">
-            <div class="w-24 h-full bg-blue-500"></div>
-          </div>
-          <div class="flex flex-wrap sm:flex-row flex-col py-6 mb-12">
-            <h1
-              class="sm:w-2/5 text-gray-900 font-medium title-font text-4xl mb-2 sm:mb-0"
+    <section class="py-24 bg-white">
+      <div class="container mx-auto px-5">
+        <h2
+          class="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-12"
+        >
+          Marcas que distribuimos
+        </h2>
+        <div
+          class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 items-center justify-items-center"
+        >
+          <!-- Replace these SVGs with your real brand logos -->
+          <div
+            class="w-32 h-16 flex items-center justify-center bg-gray-100 rounded-lg shadow"
+          >
+            <svg width="80" height="32"
+              ><rect width="80" height="32" rx="8" fill="#E5E7EB"></rect><text
+                x="40"
+                y="20"
+                text-anchor="middle"
+                fill="#9CA3AF"
+                font-size="16">LOGO</text
+              ></svg
             >
-              Descubre nuestras marcas
-            </h1>
-            <p class="sm:w-3/5 leading-relaxed text-base sm:pl-10 pl-0">
-              Aquí te presentamos solo algunas de las muchas marcas que
-              distribuimos. Si no encuentras la que buscas, <!--Poner link a contactanos -->
-              ¡contáctanos! Estaremos encantados de ayudarte a encontrar la opción
-              ideal para tu negocio.
-            </p>
           </div>
-        </div>
-        <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
-          <div class="p-4 md:w-1/2 sm:mb-0 mb-6">
-            <div class="rounded-lg h-64 overflow-hidden">
-              <img
-                alt="content"
-                class="object-cover object-center h-full w-full"
-                src="/Recocoin/assets/img/img_refri_index.jpg"
-                alt="Equipos de refrigeración"
-              />
-            </div>
-            <h2 class="text-3xl font-medium title-font text-gray-900 mt-5">
-              REFRIGERACIÓN COMERCIAL
-            </h2>
-            <p class="text-base leading-relaxed mt-2">
-              Enfriadores verticales, horizontales, conservadores de congelados,
-              vitrinas, cámaras frías...
-            </p>
-            <a class="text-blue-500 inline-flex items-center mt-3"
-              >Ver más
-              <svg
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                class="w-4 h-4 ml-2"
-                viewBox="0 0 24 24"
-              >
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-              </svg>
-            </a>
+          <div
+            class="w-32 h-16 flex items-center justify-center bg-gray-100 rounded-lg shadow"
+          >
+            <svg width="80" height="32"
+              ><rect width="80" height="32" rx="8" fill="#E5E7EB"></rect><text
+                x="40"
+                y="20"
+                text-anchor="middle"
+                fill="#9CA3AF"
+                font-size="16">LOGO</text
+              ></svg
+            >
           </div>
-          <div class="p-4 md:w-1/2 sm:mb-0 mb-6">
-            <div class="rounded-lg h-64 overflow-hidden">
-              <img
-                alt="content"
-                class="object-cover object-center h-full w-full"
-                src="/Recocoin/assets/img/img_cocina_index.jpg"
-                alt="Cocina industrial"
-              />
-            </div>
-            <h2 class="text-3xl font-medium title-font text-gray-900 mt-5">
-              COCINA
-            </h2>
-            <p class="text-base leading-relaxed mt-2">
-              Equipamiento de cocinas y cocción, todo en estufas, parrillas,
-              hornos, freidoras, mesas frías...
-            </p>
-            <a class="text-blue-500 inline-flex items-center mt-3"
-              >Ver más
-              <svg
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                class="w-4 h-4 ml-2"
-                viewBox="0 0 24 24"
-              >
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-              </svg>
-            </a>
+          <div
+            class="w-32 h-16 flex items-center justify-center bg-gray-100 rounded-lg shadow"
+          >
+            <svg width="80" height="32"
+              ><rect width="80" height="32" rx="8" fill="#E5E7EB"></rect><text
+                x="40"
+                y="20"
+                text-anchor="middle"
+                fill="#9CA3AF"
+                font-size="16">LOGO</text
+              ></svg
+            >
           </div>
-          <div class="p-4 md:w-1/2 sm:mb-0 mb-6">
-            <div class="rounded-lg h-64 overflow-hidden">
-              <img
-                alt="content"
-                class="object-cover object-center h-full w-full"
-                src="/Recocoin/assets/img/img_bym_index.jpg"
-                alt="Básculas y maquinaria"
-              />
-            </div>
-            <h2 class="text-3xl font-medium title-font text-gray-900 mt-5">
-              BÁSCULAS Y MAQUINARIA
-            </h2>
-            <p class="text-base leading-relaxed mt-2">
-              Equipo para tu negocio, panadería y pizzería, cafeterías,
-              procesamiento y empacado, máquina de hielo, helados...
-            </p>
-            <a class="text-blue-500 inline-flex items-center mt-3"
-              >Ver más
-              <svg
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                class="w-4 h-4 ml-2"
-                viewBox="0 0 24 24"
-              >
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-              </svg>
-            </a>
-          </div>
-          <div class="p-4 md:w-1/2 sm:mb-0 mb-6">
-            <div class="rounded-lg h-64 overflow-hidden">
-              <img
-                alt="content"
-                class="object-cover object-center h-full w-full"
-                src="/Recocoin/assets/img/img_refacc_index.jpg"
-                alt="Refacciones y accesorios"
-              />
-            </div>
-            <h2 class="text-3xl font-medium title-font text-gray-900 mt-5">
-              REFACCIONES Y ACCESORIOS
-            </h2>
-            <p class="text-base leading-relaxed mt-2">
-              Gases refrigerantes, rodajas, termometros, controles, compresores,
-              baterías, cables, leds...
-            </p>
-            <a class="text-blue-500 inline-flex items-center mt-3"
-              >Ver más
-              <svg
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                class="w-4 h-4 ml-2"
-                viewBox="0 0 24 24"
-              >
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-              </svg>
-            </a>
+          <div
+            class="w-32 h-16 flex items-center justify-center bg-gray-100 rounded-lg shadow"
+          >
+            <svg width="80" height="32"
+              ><rect width="80" height="32" rx="8" fill="#E5E7EB"></rect><text
+                x="40"
+                y="20"
+                text-anchor="middle"
+                fill="#9CA3AF"
+                font-size="16">LOGO</text
+              ></svg
+            >
           </div>
         </div>
       </div>
