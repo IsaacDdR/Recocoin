@@ -3,7 +3,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16">
         <div class="flex items-center">
-          <img class="h-10 w-auto" src="src/assets/svg/recocoin-logo.svg" alt="Recocoin Logo">
+          <img class="h-10 w-auto" src="/Recocoin/assets/svg/recocoin-logo.svg" alt="Recocoin Logo">
         </div>
         
         <!-- Desktop Navigation -->
