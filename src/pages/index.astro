@@ -13,25 +13,49 @@ import logo40 from "../assets/img/40-logo.png";
 <style>
   @keyframes color-shift {
     0% {
-      color: #1e40af;
+      background-position: 20% 50%;
     }
-    16% {
-      color: #1d4ed8;
+    17% {
+      background-position: 23% 47%;
     }
-    32% {
-      color: #2563eb;
+    33% {
+      background-position: 41% 53%;
     }
-    48% {
-      color: #3b82f6;
+    49% {
+      background-position: 65% 48%;
     }
-    64% {
-      color: #1e3a8a;
+    67% {
+      background-position: 87% 52%;
     }
-    80% {
-      color: #1e40af;
+    83% {
+      background-position: 70% 55%;
     }
     100% {
-      color: #1d4ed8;
+      background-position: 20% 50%;
+    }
+  }
+
+  @keyframes color-shift-reverse {
+    0% {
+      background-position: 80% 50%;
+    }
+    19% {
+      background-position: 77% 53%;
+    }
+    37% {
+      background-position: 59% 47%;
+    }
+    53% {
+      background-position: 35% 52%;
+    }
+    71% {
+      background-position: 13% 48%;
+    }
+    89% {
+      background-position: 30% 45%;
+    }
+    100% {
+      background-position: 80% 50%;
     }
   }
 
@@ -83,9 +107,67 @@ import logo40 from "../assets/img/40-logo.png";
     }
   }
 
+  @keyframes button-shimmer {
+    0% {
+      background-position: -200% center;
+    }
+    100% {
+      background-position: 200% center;
+    }
+  }
+
+  @keyframes button-pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4);
+    }
+    70% {
+      box-shadow: 0 0 0 10px rgba(59, 130, 246, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
+    }
+  }
+
   .animate-color-shift {
-    animation: color-shift 8s ease-in-out infinite;
-    animation-delay: 0.5s;
+    background: linear-gradient(
+      90deg,
+      #1e40af,
+      #2563eb,
+      #3b82f6,
+      #60a5fa,
+      #93c5fd,
+      #60a5fa,
+      #3b82f6,
+      #2563eb,
+      #1e40af
+    );
+    background-size: 300% auto;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: color-shift 14s ease-in-out infinite;
+    display: inline-block;
+  }
+
+  .animate-color-shift-reverse {
+    background: linear-gradient(
+      90deg,
+      #1e40af,
+      #2563eb,
+      #3b82f6,
+      #60a5fa,
+      #93c5fd,
+      #60a5fa,
+      #3b82f6,
+      #2563eb,
+      #1e40af
+    );
+    background-size: 300% auto;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: color-shift-reverse 17s ease-in-out infinite;
+    display: inline-block;
   }
 
   .animate-bg-shift {
@@ -97,6 +179,59 @@ import logo40 from "../assets/img/40-logo.png";
     animation: border-shift 7s ease-in-out infinite;
     animation-delay: 1.5s;
   }
+
+  .animate-button-gradient {
+    background: linear-gradient(
+      90deg,
+      #1e40af,
+      #2563eb,
+      #3b82f6,
+      #60a5fa,
+      #93c5fd,
+      #60a5fa,
+      #3b82f6,
+      #2563eb,
+      #1e40af
+    );
+    background-size: 300% auto;
+    position: relative;
+    animation: button-pulse 3s infinite;
+    box-shadow:
+      0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06),
+      inset 0 2px 4px rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .animate-button-gradient:hover {
+    background: #1e40af;
+    animation: none;
+    box-shadow:
+      0 10px 15px -3px rgba(0, 0, 0, 0.1),
+      0 4px 6px -2px rgba(0, 0, 0, 0.05),
+      inset 0 2px 4px rgba(255, 255, 255, 0.2);
+    transform: translateY(-1px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .animate-button-gradient::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.15),
+      transparent
+    );
+    background-size: 200% 100%;
+    animation: button-shimmer 4s linear infinite;
+    border-radius: 9999px;
+  }
 </style>
 
 <IndexLayout title="Recocoin">
@@ -107,36 +242,36 @@ import logo40 from "../assets/img/40-logo.png";
       style={`background-image: url(${cocinaHeader.src})`}
     >
       <div
-        class="absolute inset-0 bg-gradient-to-b from-gray-900/60 via-gray-800/70 to-gray-900/80"
+        class="absolute inset-0 bg-gradient-to-b from-gray-900/70 via-gray-800/80 to-gray-900/100"
       >
       </div>
       <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
         <h1
           class="text-white font-bold text-5xl sm:text-6xl lg:text-7xl leading-tight mb-8 tracking-tight"
         >
-          Infraestructura térmica para la industria
-          <span class="animate-color-shift">gastronómica</span>
+          <span class="animate-color-shift">Infraestructura</span> térmica para la
+          <span class="animate-color-shift-reverse">industria</span>
         </h1>
         <p
           class="text-xl sm:text-2xl font-light text-gray-200 mb-12 max-w-3xl mx-auto leading-relaxed"
         >
           Diseñamos y equipamos cocinas industriales y sistemas de refrigeración
-          con precisión y rendimiento garantizados.
+          con precisión, rendimiento y calidad garantizados.
         </p>
         <div
-          class="flex flex-col sm:flex-row gap-6 justify-center items-center"
+          class="flex flex-col sm:flex-row gap-8 justify-center items-center mt-8"
         >
           <button
             type="button"
-            class="group relative overflow-hidden bg-blue-900 hover:bg-blue-800 text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl min-w-[160px]"
+            class="group relative overflow-hidden animate-button-gradient text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl min-w-[200px]"
           >
-            <span class="relative z-10">Contactar ahora</span>
+            <span class="relative z-10">¡Hablemos!</span>
           </button>
           <button
             type="button"
-            class="group relative overflow-hidden bg-transparent border-2 border-gray-400 text-white hover:bg-white hover:text-gray-900 font-semibold px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-105 min-w-[160px]"
+            class="group relative overflow-hidden bg-transparent border-2 border-gray-400 text-white hover:bg-white hover:text-gray-900 font-semibold px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-105 min-w-[200px]"
           >
-            <span class="relative z-10">Ver productos</span>
+            <span class="relative z-10">Productos</span>
           </button>
         </div>
       </div>

@@ -1,6 +1,6 @@
 <template>
   <header
-    class="bg-gradient-to-r from-gray-900/80 to-gray-800/75 backdrop-blur-2xl shadow-[0_8px_32px_-8px_rgba(0,0,0,0.4)] fixed top-0 left-0 right-0 z-50 border-b border-white/10 transition-transform duration-500"
+    class="bg-gradient-to-r from-gray-900/80 to-gray-800/75 backdrop-blur-2xl shadow-[0_8px_32px_-8px_rgba(0,0,0,0.4)] fixed top-0 left-0 right-0 z-50 border-b border-white/10 transition-transform duration-500 animate-nav-gradient"
     :class="{ 'translate-y-0': isVisible, '-translate-y-full': !isVisible }"
   >
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -180,5 +180,30 @@ export default {
 <style scoped>
 header {
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes nav-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-nav-gradient {
+  background: linear-gradient(
+    90deg,
+    rgba(17, 24, 39, 0.8),
+    rgba(31, 41, 55, 0.75),
+    rgba(55, 65, 81, 0.8),
+    rgba(31, 41, 55, 0.75),
+    rgba(17, 24, 39, 0.8)
+  );
+  background-size: 200% 100%;
+  animation: nav-gradient 30s ease infinite;
 }
 </style>
