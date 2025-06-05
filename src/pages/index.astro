@@ -8,6 +8,7 @@ import metalfrioLogo from "../assets/svg/metalfrio-logo.svg";
 import vencortLogo from "../assets/img/vencort.png";
 import loboLogo from "../assets/img/lobo-logo.jpg";
 import logo40 from "../assets/img/40-logo.png";
+import SwiperBusinessAreas from "../components/SwiperBusinessAreas.vue";
 ---
 
 <style>
@@ -276,7 +277,103 @@ import logo40 from "../assets/img/40-logo.png";
         </div>
       </div>
     </section>
-
+    <!-- ABOUT US SECTION -->
+    <section class="w-full py-20 bg-white flex items-center justify-center">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <div class="text-sm uppercase tracking-widest text-gray-600 mb-4">
+          About Us
+        </div>
+        <h2
+          class="text-3xl sm:text-4xl md:text-5xl font-light text-[#153040] mb-8 leading-snug"
+        >
+          Catering is our passion and our DNA.<br />
+          Thanks to a craftsman's spirit and industrial know-how, we know how to
+          build your complete system, from small establishments to large-scale distribution.
+        </h2>
+      </div>
+    </section>
+    <!--BUISINESS MODEL SECTION -->
+    <section class="py-16 bg-white flex justify-center">
+      <div class="w-full max-w-full px-0 lg:mx-16 2xl:mx-32">
+        <div class="text-center mb-12">
+          <div class="text-base uppercase tracking-widest text-[#153040] mb-2">
+            Business Areas
+          </div>
+        </div>
+        <!-- Mobile Swiper -->
+        <div class="block md:hidden">
+          <SwiperBusinessAreas client:only="vue" />
+        </div>
+        <!-- Desktop & Tablet Grid -->
+        <div
+          class="hidden md:grid grid-cols-2 xl:grid-cols-4 gap-6 xl:gap-12 w-full"
+        >
+          <div
+            class="bg-black p-12 flex flex-col justify-between h-full min-h-[500px]"
+          >
+            <div>
+              <h3 class="text-white text-2xl font-light mb-4">Restaurants</h3>
+              <p class="text-white text-base font-light mb-8">
+                Discover our tools for a highly profitable kitchen.
+              </p>
+            </div>
+            <img
+              src="https://via.placeholder.com/350x180?text=Restaurants"
+              alt="Restaurants"
+              class="w-full object-contain"
+            />
+          </div>
+          <div
+            class="bg-black p-12 flex flex-col justify-between h-full min-h-[500px]"
+          >
+            <div>
+              <h3 class="text-white text-2xl font-light mb-4">High Cuisine</h3>
+              <p class="text-white text-base font-light mb-8">
+                Discover the most suitable solutions for even the most demanding
+                chef.
+              </p>
+            </div>
+            <img
+              src="https://via.placeholder.com/350x180?text=High+Cuisine"
+              alt="High Cuisine"
+              class="w-full object-contain"
+            />
+          </div>
+          <div
+            class="bg-black p-12 flex flex-col justify-between h-full min-h-[500px]"
+          >
+            <div>
+              <h3 class="text-white text-2xl font-light mb-4">
+                Fast Casual Food
+              </h3>
+              <p class="text-white text-base font-light mb-8">
+                From franchise formats to replicable cooking.
+              </p>
+            </div>
+            <img
+              src="https://via.placeholder.com/350x180?text=Fast+Casual+Food"
+              alt="Fast Casual Food"
+              class="w-full object-contain"
+            />
+          </div>
+          <div
+            class="bg-black p-12 flex flex-col justify-between h-full min-h-[500px]"
+          >
+            <div>
+              <h3 class="text-white text-2xl font-light mb-4">Design</h3>
+              <p class="text-white text-base font-light mb-8">
+                Discover the tools to support your professionalism.
+              </p>
+            </div>
+            <img
+              src="https://via.placeholder.com/350x180?text=Design"
+              alt="Design"
+              class="w-full object-contain"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
     <!--BENEFICIOS -->
     <section class="text-gray-600 body-font">
       <div class="container px-5 py-12 lg:py-12 mx-auto">
