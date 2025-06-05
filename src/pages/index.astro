@@ -1,5 +1,13 @@
 ---
 import IndexLayout from "../layouts/IndexLayout.astro";
+import { Image } from "astro:assets";
+import cocinaHeader from "../assets/img/cocina-header.jpg";
+import rhinoLogo from "../assets/svg/rhino-logo.svg";
+import criotecLogo from "../assets/svg/criotec-logo.svg";
+import metalfrioLogo from "../assets/svg/metalfrio-logo.svg";
+import vencortLogo from "../assets/img/vencort.png";
+import loboLogo from "../assets/img/lobo-logo.jpg";
+import logo40 from "../assets/img/40-logo.png";
 ---
 
 <IndexLayout title="Recocoin">
@@ -7,7 +15,7 @@ import IndexLayout from "../layouts/IndexLayout.astro";
     <!--HERO SECTION -->
     <section
       class="relative w-full min-h-[500px] flex items-center justify-center bg-cover bg-center"
-      style="background-image: url('/Recocoin/src/assets/img/cocina-header.jpg');"
+      style={`background-image: url(${cocinaHeader.src})`}
     >
       <div class="absolute inset-0 bg-gray-900/70"></div>
       <div
@@ -157,46 +165,22 @@ import IndexLayout from "../layouts/IndexLayout.astro";
         </h2>
         <div class="grid grid-cols-6 gap-8 items-center justify-items-center">
           <div class="w-32 h-16 flex items-center justify-center">
-            <img
-              src="/Recocoin/src/assets/svg/rhino-logo.svg"
-              alt="Rhino"
-              class="w-32 h-16"
-            />
+            <Image src={rhinoLogo} alt="Rhino" class="w-32 h-16" />
           </div>
           <div class="w-32 h-16 flex items-center justify-center">
-            <img
-              src="/Recocoin/src/assets/svg/criotec-logo.svg"
-              alt="Criotec"
-              class="w-32 h-16"
-            />
+            <Image src={criotecLogo} alt="Criotec" class="w-32 h-16" />
           </div>
           <div class="w-32 h-16 flex items-center justify-center">
-            <img
-              src="/Recocoin/src/assets/svg/metalfrio-logo.svg"
-              alt="Metalfrio"
-              class="w-32 h-16"
-            />
+            <Image src={metalfrioLogo} alt="Metalfrio" class="w-32 h-16" />
           </div>
           <div class="w-32 h-16 flex items-center justify-center">
-            <img
-              src="/Recocoin/src/assets/img/vencort.png"
-              alt="Vencort"
-              class="w-32 h-16"
-            />
+            <Image src={vencortLogo} alt="Vencort" class="w-32 h-16" />
           </div>
           <div class="w-32 h-32 flex items-center justify-center">
-            <img
-              src="/Recocoin/src/assets/img/lobo-logo.jpg"
-              alt="Lobo"
-              class="w-32 h-32"
-            />
+            <Image src={loboLogo} alt="Lobo" class="w-32 h-32" />
           </div>
           <div class="w-32 h-16 flex items-center justify-center">
-            <img
-              src="/Recocoin/src/assets/img/40-logo.png"
-              alt="40"
-              class="w-30 h-16"
-            />
+            <Image src={logo40} alt="40" class="w-30 h-16" />
           </div>
         </div>
       </div>
