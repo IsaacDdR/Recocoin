@@ -1,6 +1,7 @@
 <template>
   <header
-    class="bg-gradient-to-r from-gray-900/95 to-gray-800/95 backdrop-blur-xl shadow-[0_4px_20px_-4px_rgba(0,0,0,0.3)] relative border-b border-gray-700/50"
+    class="bg-gradient-to-r from-gray-900/80 to-gray-800/75 backdrop-blur-2xl shadow-[0_8px_32px_-8px_rgba(0,0,0,0.4)] fixed top-0 left-0 right-0 z-50 border-b border-white/10 transition-transform duration-500"
+    :class="{ 'translate-y-0': isVisible, '-translate-y-full': !isVisible }"
   >
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16">
@@ -103,7 +104,7 @@
       ]"
     >
       <div
-        class="mx-4 mt-2 bg-gradient-to-r from-gray-900/95 to-gray-800/95 backdrop-blur-xl shadow-[0_4px_20px_-4px_rgba(0,0,0,0.3)] rounded-lg border border-gray-700/50"
+        class="mx-4 mt-2 bg-gradient-to-r from-gray-900/80 to-gray-800/75 backdrop-blur-2xl shadow-[0_8px_32px_-8px_rgba(0,0,0,0.4)] rounded-lg border border-white/10"
       >
         <div class="px-2 pt-2 pb-3 space-y-1">
           <a
@@ -140,7 +141,44 @@ export default {
     return {
       isOpen: false,
       recocoinLogo,
+      isVisible: false,
+      lastScrollY: 0,
+      scrollEventsEnabled: false,
     };
+  },
+  mounted() {
+    this.lastScrollY = window.scrollY;
+    // Initial slide down animation
+    setTimeout(() => {
+      this.isVisible = true;
+      // Enable scroll events after animation
+      setTimeout(() => {
+        this.scrollEventsEnabled = true;
+        window.addEventListener("scroll", this.handleScroll);
+      }, 600); // Match your transition duration
+    }, 100);
+  },
+  beforeUnmount() {
+    window.removeEventListener("scroll", this.handleScroll);
+  },
+  methods: {
+    handleScroll() {
+      if (!this.scrollEventsEnabled) return;
+      if (window.scrollY < this.lastScrollY) {
+        // Scrolling up
+        this.isVisible = true;
+      } else if (window.scrollY > this.lastScrollY) {
+        // Scrolling down
+        this.isVisible = false;
+      }
+      this.lastScrollY = window.scrollY;
+    },
   },
 };
 </script>
+
+<style scoped>
+header {
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+</style>
