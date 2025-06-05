@@ -7,7 +7,7 @@ import IndexLayout from "../layouts/IndexLayout.astro";
     <!--HERO SECTION -->
     <section
       class="relative w-full min-h-[500px] flex items-center justify-center bg-cover bg-center"
-      style="background-image: url('/Recocoin/assets/img/cocina-header.jpg');"
+      style="background-image: url('/src/assets/img/cocina-header.jpg');"
     >
       <div class="absolute inset-0 bg-gray-900/70"></div>
       <div
@@ -47,7 +47,7 @@ import IndexLayout from "../layouts/IndexLayout.astro";
 
     <!--BENEFICIOS -->
     <section class="text-gray-600 body-font">
-      <div class="container px-5 py-12 lg:py-16 mx-auto">
+      <div class="container px-5 py-12 lg:py-12 mx-auto">
         <!--
         <h1
           class="text-3xl font-medium title-font text-center text-gray-900 mb-20 lg:sm:text-5xl lg:text-4xl lg:font-bold lg:mb-24"
@@ -148,68 +148,51 @@ import IndexLayout from "../layouts/IndexLayout.astro";
       </div>
     </section>
     <!--INTRO MARCAS -->
-    <section class="py-24 bg-white">
+    <section class="py-12 bg-white">
       <div class="container mx-auto px-5">
         <h2
           class="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-12"
         >
           Marcas que distribuimos
         </h2>
-        <div
-          class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 items-center justify-items-center"
-        >
-          <!-- Replace these SVGs with your real brand logos -->
-          <div
-            class="w-32 h-16 flex items-center justify-center bg-gray-100 rounded-lg shadow"
-          >
-            <svg width="80" height="32"
-              ><rect width="80" height="32" rx="8" fill="#E5E7EB"></rect><text
-                x="40"
-                y="20"
-                text-anchor="middle"
-                fill="#9CA3AF"
-                font-size="16">LOGO</text
-              ></svg
-            >
+        <div class="grid grid-cols-6 gap-8 items-center justify-items-center">
+          <div class="w-32 h-16 flex items-center justify-center">
+            <img
+              src="/src/assets/svg/rhino-logo.svg"
+              alt="Rhino"
+              class="w-32 h-16"
+            />
           </div>
-          <div
-            class="w-32 h-16 flex items-center justify-center bg-gray-100 rounded-lg shadow"
-          >
-            <svg width="80" height="32"
-              ><rect width="80" height="32" rx="8" fill="#E5E7EB"></rect><text
-                x="40"
-                y="20"
-                text-anchor="middle"
-                fill="#9CA3AF"
-                font-size="16">LOGO</text
-              ></svg
-            >
+          <div class="w-32 h-16 flex items-center justify-center">
+            <img
+              src="/src/assets/svg/criotec-logo.svg"
+              alt="Criotec"
+              class="w-32 h-16"
+            />
           </div>
-          <div
-            class="w-32 h-16 flex items-center justify-center bg-gray-100 rounded-lg shadow"
-          >
-            <svg width="80" height="32"
-              ><rect width="80" height="32" rx="8" fill="#E5E7EB"></rect><text
-                x="40"
-                y="20"
-                text-anchor="middle"
-                fill="#9CA3AF"
-                font-size="16">LOGO</text
-              ></svg
-            >
+          <div class="w-32 h-16 flex items-center justify-center">
+            <img
+              src="/src/assets/svg/metalfrio-logo.svg"
+              alt="Metalfrio"
+              class="w-32 h-16"
+            />
           </div>
-          <div
-            class="w-32 h-16 flex items-center justify-center bg-gray-100 rounded-lg shadow"
-          >
-            <svg width="80" height="32"
-              ><rect width="80" height="32" rx="8" fill="#E5E7EB"></rect><text
-                x="40"
-                y="20"
-                text-anchor="middle"
-                fill="#9CA3AF"
-                font-size="16">LOGO</text
-              ></svg
-            >
+          <div class="w-32 h-16 flex items-center justify-center">
+            <img
+              src="/src/assets/img/vencort.png"
+              alt="Vencort"
+              class="w-32 h-16"
+            />
+          </div>
+          <div class="w-32 h-32 flex items-center justify-center">
+            <img
+              src="/src/assets/img/lobo-logo.jpg"
+              alt="Lobo"
+              class="w-32 h-32"
+            />
+          </div>
+          <div class="w-32 h-16 flex items-center justify-center">
+            <img src="/src/assets/img/40-logo.png" alt="40" class="w-30 h-16" />
           </div>
         </div>
       </div>
@@ -218,4 +201,21 @@ import IndexLayout from "../layouts/IndexLayout.astro";
   </main>
 </IndexLayout>
 
-<style></style>
+<style>
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-scroll {
+    animation: scroll 30s linear infinite;
+  }
+
+  .animate-scroll:hover {
+    animation-play-state: paused;
+  }
+</style>

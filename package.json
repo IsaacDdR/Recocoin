@@ -13,9 +13,9 @@
   "dependencies": {
     "@astrojs/check": "^0.9.4",
     "@astrojs/tailwind": "^6.0.2",
-    "@astrojs/vue": "^5.0.10",
+    "@astrojs/vue": "5.1.0",
     "animate.css": "^4.1.1",
-    "astro": "^5.7.2",
+    "astro": "5.8.2",
     "astro-navbar": "^2.3.9",
     "normalize.css": "^8.0.1",
     "prettier": "^3.5.3",
