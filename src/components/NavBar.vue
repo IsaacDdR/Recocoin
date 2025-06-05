@@ -7,7 +7,7 @@
         <div class="flex items-center">
           <img
             class="h-10 w-auto"
-            src="/Recocoin/src/assets/svg/recocoin-logo.svg"
+            src="/src/assets/svg/recocoin-logo.svg"
             alt="Recocoin Logo"
           />
         </div>
@@ -133,10 +133,13 @@
 </template>
 
 <script>
+import recocoinLogo from "../assets/svg/recocoin-logo.svg";
+
 export default {
   data() {
     return {
       isOpen: false,
+      recocoinLogo,
     };
   },
 };
