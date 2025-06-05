@@ -233,15 +233,31 @@ import SwiperBusinessAreas from "../components/SwiperBusinessAreas.vue";
     animation: button-shimmer 4s linear infinite;
     border-radius: 9999px;
   }
+
+  .parallax-bg {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+  }
+  @media (max-width: 640px) {
+    .parallax-bg {
+      background-attachment: scroll;
+    }
+  }
 </style>
 
 <IndexLayout title="Recocoin">
   <main>
     <!--HERO SECTION -->
     <section
-      class="relative w-full h-screen flex items-center justify-center bg-cover bg-center"
-      style={`background-image: url(${cocinaHeader.src})`}
+      class="relative w-full h-screen flex items-center justify-center overflow-hidden"
     >
+      <img
+        src={cocinaHeader.src}
+        alt="Hero Background"
+        class="absolute inset-0 w-full h-full object-cover parallax-bg"
+        style="z-index: 0;"
+      />
       <div
         class="absolute inset-0 bg-gradient-to-b from-gray-900/70 via-gray-800/80 to-gray-900/100"
       >
@@ -541,3 +557,19 @@ import SwiperBusinessAreas from "../components/SwiperBusinessAreas.vue";
     <!-- CONTENT -->
   </main>
 </IndexLayout>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const images = document.querySelectorAll<HTMLImageElement>(".parallax-bg");
+    if (images.length) {
+      // Create a simple parallax effect manually
+      window.addEventListener("scroll", () => {
+        const scrolled = window.scrollY;
+        images.forEach((image) => {
+          const speed = 0.5;
+          image.style.transform = `translateY(${scrolled * speed}px)`;
+        });
+      });
+    }
+  });
+</script>
