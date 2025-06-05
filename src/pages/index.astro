@@ -163,24 +163,56 @@ import logo40 from "../assets/img/40-logo.png";
         >
           Marcas que distribuimos
         </h2>
-        <div class="grid grid-cols-6 gap-8 items-center justify-items-center">
-          <div class="w-32 h-16 flex items-center justify-center">
-            <Image src={rhinoLogo} alt="Rhino" class="w-32 h-16" />
+        <div
+          class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center justify-items-center"
+        >
+          <div
+            class="w-24 sm:w-32 h-12 sm:h-16 flex items-center justify-center"
+          >
+            <Image
+              src={rhinoLogo}
+              alt="Rhino"
+              class="w-24 sm:w-32 h-12 sm:h-16"
+            />
           </div>
-          <div class="w-32 h-16 flex items-center justify-center">
-            <Image src={criotecLogo} alt="Criotec" class="w-32 h-16" />
+          <div
+            class="w-24 sm:w-32 h-12 sm:h-16 flex items-center justify-center"
+          >
+            <Image
+              src={criotecLogo}
+              alt="Criotec"
+              class="w-24 sm:w-32 h-12 sm:h-16"
+            />
           </div>
-          <div class="w-32 h-16 flex items-center justify-center">
-            <Image src={metalfrioLogo} alt="Metalfrio" class="w-32 h-16" />
+          <div
+            class="w-24 sm:w-32 h-12 sm:h-16 flex items-center justify-center"
+          >
+            <Image
+              src={metalfrioLogo}
+              alt="Metalfrio"
+              class="w-24 sm:w-32 h-12 sm:h-16"
+            />
           </div>
-          <div class="w-32 h-16 flex items-center justify-center">
-            <Image src={vencortLogo} alt="Vencort" class="w-32 h-16" />
+          <div
+            class="w-24 sm:w-32 h-12 sm:h-16 flex items-center justify-center"
+          >
+            <Image
+              src={vencortLogo}
+              alt="Vencort"
+              class="w-24 sm:w-32 h-12 sm:h-16"
+            />
           </div>
-          <div class="w-32 h-32 flex items-center justify-center">
-            <Image src={loboLogo} alt="Lobo" class="w-32 h-32" />
+          <div
+            class="w-24 sm:w-32 h-24 sm:h-32 flex items-center justify-center"
+          >
+            <Image
+              src={loboLogo}
+              alt="Lobo"
+              class="w-24 sm:w-32 h-24 sm:h-32"
+            />
           </div>
-          <div class="w-32 h-16 flex items-center justify-center">
-            <Image src={logo40} alt="40" class="w-30 h-16" />
+          <div class="flex items-center justify-center">
+            <Image src={logo40} alt="40" class="w-16" />
           </div>
         </div>
       </div>
@@ -188,22 +220,3 @@ import logo40 from "../assets/img/40-logo.png";
     <!-- CONTENT -->
   </main>
 </IndexLayout>
-
-<style>
-  @keyframes scroll {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
-  }
-
-  .animate-scroll {
-    animation: scroll 30s linear infinite;
-  }
-
-  .animate-scroll:hover {
-    animation-play-state: paused;
-  }
-</style>
