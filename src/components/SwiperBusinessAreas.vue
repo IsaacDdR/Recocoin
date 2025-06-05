@@ -95,6 +95,22 @@ import "swiper/css";
 import "swiper/css/pagination";
 </script>
 
+<script type="module">
+if (typeof window !== "undefined") {
+  import("simple-parallax-js").then(({ default: simpleParallax }) => {
+    const images = document.querySelectorAll(".parallax-bg");
+    if (images.length) {
+      new simpleParallax(images, {
+        scale: 1.1,
+        delay: 0.2,
+        transition: "cubic-bezier(0,0,0,1)",
+        orientation: "up",
+      });
+    }
+  });
+}
+</script>
+
 <style scoped>
 .swiper {
   display: flex;

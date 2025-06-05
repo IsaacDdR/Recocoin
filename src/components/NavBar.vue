@@ -3,11 +3,13 @@
     class="bg-gradient-to-r from-gray-900/80 to-gray-800/75 backdrop-blur-2xl shadow-[0_8px_32px_-8px_rgba(0,0,0,0.4)] fixed top-0 left-0 right-0 z-50 border-b border-white/10 transition-transform duration-500 animate-nav-gradient"
     :class="{ 'translate-y-0': isVisible, '-translate-y-full': !isVisible }"
   >
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16">
+    <div class="max-w-7xl px-2 sm:px-4 lg:px-6 ml-8 sm:ml-12 lg:ml-16">
+      <div
+        class="flex items-center justify-between h-16 sm:h-24 md:h-28 lg:h-32"
+      >
         <div class="flex items-center">
           <img
-            class="h-10 w-auto"
+            class="h-12 sm:h-16 md:h-20 lg:h-24 w-auto"
             src="/Recocoin/assets/svg/recocoin-logo.svg"
             alt="Recocoin Logo"
           />
