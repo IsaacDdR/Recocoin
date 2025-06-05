@@ -10,45 +10,134 @@ import loboLogo from "../assets/img/lobo-logo.jpg";
 import logo40 from "../assets/img/40-logo.png";
 ---
 
+<style>
+  @keyframes color-shift {
+    0% {
+      color: #1e40af;
+    }
+    16% {
+      color: #1d4ed8;
+    }
+    32% {
+      color: #2563eb;
+    }
+    48% {
+      color: #3b82f6;
+    }
+    64% {
+      color: #1e3a8a;
+    }
+    80% {
+      color: #1e40af;
+    }
+    100% {
+      color: #1d4ed8;
+    }
+  }
+
+  @keyframes bg-shift {
+    0% {
+      background-color: #374151;
+    }
+    16% {
+      background-color: #4b5563;
+    }
+    32% {
+      background-color: #1f2937;
+    }
+    48% {
+      background-color: #374151;
+    }
+    64% {
+      background-color: #111827;
+    }
+    80% {
+      background-color: #1f2937;
+    }
+    100% {
+      background-color: #374151;
+    }
+  }
+
+  @keyframes border-shift {
+    0% {
+      border-color: #374151;
+    }
+    16% {
+      border-color: #4b5563;
+    }
+    32% {
+      border-color: #6b7280;
+    }
+    48% {
+      border-color: #9ca3af;
+    }
+    64% {
+      border-color: #374151;
+    }
+    80% {
+      border-color: #4b5563;
+    }
+    100% {
+      border-color: #374151;
+    }
+  }
+
+  .animate-color-shift {
+    animation: color-shift 8s ease-in-out infinite;
+    animation-delay: 0.5s;
+  }
+
+  .animate-bg-shift {
+    animation: bg-shift 6s ease-in-out infinite;
+    animation-delay: 1s;
+  }
+
+  .animate-border-shift {
+    animation: border-shift 7s ease-in-out infinite;
+    animation-delay: 1.5s;
+  }
+</style>
+
 <IndexLayout title="Recocoin">
   <main>
     <!--HERO SECTION -->
     <section
-      class="relative w-full min-h-[500px] flex items-center justify-center bg-cover bg-center"
+      class="relative w-full h-screen flex items-center justify-center bg-cover bg-center"
       style={`background-image: url(${cocinaHeader.src})`}
     >
-      <div class="absolute inset-0 bg-gray-900/70"></div>
       <div
-        class="relative z-10 max-w-2xl mx-auto px-6 py-20 flex flex-col items-center"
+        class="absolute inset-0 bg-gradient-to-b from-gray-900/60 via-gray-800/70 to-gray-900/80"
       >
-        <div
-          class="bg-gray-900/60 backdrop-blur-md rounded-2xl p-8 w-full text-center shadow-xl"
+      </div>
+      <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
+        <h1
+          class="text-white font-bold text-5xl sm:text-6xl lg:text-7xl leading-tight mb-8 tracking-tight"
         >
-          <h1
-            class="text-white font-bold text-4xl sm:text-5xl lg:text-6xl leading-tight mb-4 drop-shadow-lg"
+          Infraestructura térmica para la industria
+          <span class="animate-color-shift">gastronómica</span>
+        </h1>
+        <p
+          class="text-xl sm:text-2xl font-light text-gray-200 mb-12 max-w-3xl mx-auto leading-relaxed"
+        >
+          Diseñamos y equipamos cocinas industriales y sistemas de refrigeración
+          con precisión y rendimiento garantizados.
+        </p>
+        <div
+          class="flex flex-col sm:flex-row gap-6 justify-center items-center"
+        >
+          <button
+            type="button"
+            class="group relative overflow-hidden bg-blue-900 hover:bg-blue-800 text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl min-w-[160px]"
           >
-            Infraestructura térmica para la industria gastronómica
-          </h1>
-          <p class="text-lg font-medium text-gray-200 mt-2 drop-shadow mb-6">
-            Diseñamos y equipamos cocinas industriales y sistemas de
-            refrigeración con precisión y rendimiento garantizados.
-          </p>
-          <div class="flex gap-4 mt-4 justify-center">
-            <button
-              type="button"
-              aria-disabled="false"
-              class="group inline-flex items-center justify-center rounded-lg px-6 py-2 h-[42px] min-w-[120px] text-sm font-semibold leading-none transition-all duration-300 ease-in-out bg-gray-900 text-white hover:bg-gray-800 focus:outline-none"
-            >
-              Contacto
-            </button>
-            <button
-              type="button"
-              aria-disabled="false"
-              class="group inline-flex items-center justify-center rounded-lg px-6 py-2 h-[42px] min-w-[120px] text-sm font-semibold leading-none transition-all duration-300 ease-in-out bg-white text-gray-900 border border-gray-300 hover:bg-gray-100 focus:outline-none"
-            >
-              Productos
-            </button>
-          </div>
+            <span class="relative z-10">Contactar ahora</span>
+          </button>
+          <button
+            type="button"
+            class="group relative overflow-hidden bg-transparent border-2 border-gray-400 text-white hover:bg-white hover:text-gray-900 font-semibold px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-105 min-w-[160px]"
+          >
+            <span class="relative z-10">Ver productos</span>
+          </button>
         </div>
       </div>
     </section>
