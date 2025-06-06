@@ -2,6 +2,13 @@
 import IndexLayout from "../layouts/IndexLayout.astro";
 import { Image } from "astro:assets";
 import cocinaHeader from "../assets/img/cocina-header.jpg";
+import cocinaHeader2 from "../assets/img/cocina-header-2.jpg";
+import cocinaHeader3 from "../assets/img/cocina-header-3.jpg";
+import cocinaHeader4 from "../assets/img/cocina-header-4.jpg";
+import cocinaHeader5 from "../assets/img/cocina-header-5.png";
+import cocinaHeader6 from "../assets/img/cocina-header-6.png";
+import cocinaHeader7 from "../assets/img/cocina-header-7.png";
+import cocinaHeader8 from "../assets/img/cocina-header-8.png";
 import rhinoLogo from "../assets/svg/rhino-logo.svg";
 import criotecLogo from "../assets/svg/criotec-logo.svg";
 import metalfrioLogo from "../assets/svg/metalfrio-logo.svg";
@@ -129,6 +136,29 @@ import SwiperBusinessAreas from "../components/SwiperBusinessAreas.vue";
     }
   }
 
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      --entrance-offset: 50px;
+    }
+    to {
+      opacity: 1;
+      --entrance-offset: 0px;
+    }
+  }
+
+  @keyframes gradient-shift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
   .animate-color-shift {
     background: linear-gradient(
       90deg,
@@ -196,7 +226,6 @@ import SwiperBusinessAreas from "../components/SwiperBusinessAreas.vue";
     );
     background-size: 300% auto;
     position: relative;
-    animation: button-pulse 3s infinite;
     box-shadow:
       0 4px 6px -1px rgba(0, 0, 0, 0.1),
       0 2px 4px -1px rgba(0, 0, 0, 0.06),
@@ -232,6 +261,12 @@ import SwiperBusinessAreas from "../components/SwiperBusinessAreas.vue";
     background-size: 200% 100%;
     animation: button-shimmer 4s linear infinite;
     border-radius: 9999px;
+    pointer-events: none;
+  }
+
+  .animate-fade-in-up {
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards;
   }
 
   .parallax-bg {
@@ -244,6 +279,31 @@ import SwiperBusinessAreas from "../components/SwiperBusinessAreas.vue";
       background-attachment: scroll;
     }
   }
+
+  .section-content {
+    opacity: 0;
+    --entrance-offset: 50px;
+    --scroll-offset: 0px;
+    transform: translateY(calc(var(--entrance-offset) + var(--scroll-offset)));
+    animation: fadeInUp 1s ease-out forwards;
+  }
+
+  .section-content.visible {
+    animation: fadeInUp 1s ease-out forwards;
+  }
+
+  .animated-bg {
+    background: linear-gradient(
+      120deg,
+      #ffffff 0%,
+      #f1f5f9 25%,
+      #e2e8f0 50%,
+      #f1f5f9 75%,
+      #ffffff 100%
+    );
+    background-size: 200% 200%;
+    animation: gradient-shift 15s ease infinite;
+  }
 </style>
 
 <IndexLayout title="Recocoin">
@@ -255,18 +315,61 @@ import SwiperBusinessAreas from "../components/SwiperBusinessAreas.vue";
       <img
         src={cocinaHeader.src}
         alt="Hero Background"
-        class="absolute inset-0 w-full h-full object-cover parallax-bg"
+        class="absolute inset-0 w-full h-full object-cover parallax-bg hero-bg-image opacity-100 transition-opacity duration-1000"
         style="z-index: 0;"
+        data-bg-index="0"
+      />
+      <img
+        src={cocinaHeader2.src}
+        alt="Hero Background 2"
+        class="absolute inset-0 w-full h-full object-cover parallax-bg hero-bg-image opacity-0 transition-opacity duration-1000"
+        style="z-index: 0;"
+        data-bg-index="1"
+      />
+      <img
+        src={cocinaHeader3.src}
+        alt="Hero Background 3"
+        class="absolute inset-0 w-full h-full object-cover parallax-bg hero-bg-image opacity-0 transition-opacity duration-1000"
+        style="z-index: 0;"
+        data-bg-index="2"
+      />
+      <img
+        src={cocinaHeader4.src}
+        alt="Hero Background 4"
+        class="absolute inset-0 w-full h-full object-cover parallax-bg hero-bg-image opacity-0 transition-opacity duration-1000"
+        style="z-index: 0;"
+        data-bg-index="3"
+      />
+      <img
+        src={cocinaHeader5.src}
+        alt="Hero Background 5"
+        class="absolute inset-0 w-full h-full object-cover parallax-bg hero-bg-image opacity-0 transition-opacity duration-1000"
+        style="z-index: 0;"
+        data-bg-index="4"
+      />
+      <img
+        src={cocinaHeader6.src}
+        alt="Hero Background 6"
+        class="absolute inset-0 w-full h-full object-cover parallax-bg hero-bg-image opacity-0 transition-opacity duration-1000"
+        style="z-index: 0;"
+        data-bg-index="5"
+      />
+      <img
+        src={cocinaHeader7.src}
+        alt="Hero Background 7"
+        class="absolute inset-0 w-full h-full object-cover parallax-bg hero-bg-image opacity-0 transition-opacity duration-1000"
+        style="z-index: 0;"
+        data-bg-index="6"
       />
       <div
         class="absolute inset-0 bg-gradient-to-b from-gray-900/70 via-gray-800/80 to-gray-900/100"
       >
       </div>
       <div
-        class="relative z-10 max-w-4xl mx-auto px-8 sm:px-6 text-left -mt-24 sm:mt-0"
+        class="relative z-10 max-w-4xl mx-auto px-8 sm:px-6 text-left -mt-24 sm:mt-0 flex flex-col justify-center h-full"
       >
         <h1
-          class="text-white font-black text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.1] mb-6 sm:mb-8 tracking-[-0.02em] font-sans [text-shadow:_0_2px_3px_rgba(0,0,0,0.25)] uppercase"
+          class="text-white font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.2] sm:leading-[1.1] mb-6 sm:mb-8 tracking-[-0.02em] font-sans [text-shadow:_0_2px_3px_rgba(0,0,0,0.25)] uppercase"
         >
           <span
             class="animate-color-shift [text-shadow:_0_2px_3px_rgba(0,0,0,0.25)]"
@@ -278,17 +381,17 @@ import SwiperBusinessAreas from "../components/SwiperBusinessAreas.vue";
           >
         </h1>
         <p
-          class="text-base sm:text-lg md:text-xl lg:text-2xl font-medium text-gray-200 mb-8 sm:mb-12 leading-[1.6] font-sans [text-shadow:_0_1px_1.5px_rgba(0,0,0,0.2)] max-w-[85%] sm:max-w-3xl"
+          class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-thin text-white mb-8 sm:mb-12 leading-[1.6] font-sans [text-shadow:_0_2px_3px_rgba(0,0,0,0.3)] max-w-[85%] sm:max-w-3xl"
         >
-          Diseñamos y equipamos cocinas industriales y sistemas de refrigeración
-          con precisión, rendimiento y calidad garantizados.
+          Equipamos cocinas industriales y sistemas de refrigeración con
+          precisión, rendimiento y calidad garantizados.
         </p>
         <div
-          class="flex flex-col sm:flex-row gap-8 justify-center sm:justify-start items-center sm:items-start mt-12 sm:mt-8"
+          class="flex flex-col sm:flex-row gap-8 justify-center sm:justify-start items-center sm:items-start mt-4 sm:mt-8"
         >
           <button
             type="button"
-            class="group relative overflow-hidden animate-button-gradient text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl min-w-[200px]"
+            class="group relative overflow-hidden animate-button-gradient text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl min-w-[200px] flex items-center justify-center"
           >
             <span class="relative z-10">¡Hablemos!</span>
           </button>
@@ -302,23 +405,30 @@ import SwiperBusinessAreas from "../components/SwiperBusinessAreas.vue";
       </div>
     </section>
     <!-- ABOUT US SECTION -->
-    <section class="w-full py-20 bg-white flex items-center justify-center">
-      <div class="max-w-4xl mx-auto px-6 text-center">
-        <div class="text-sm uppercase tracking-widest text-gray-600 mb-4">
+    <section class="w-full py-40 flex items-center justify-center">
+      <div
+        class="max-w-4xl mx-auto px-6 text-center transform transition-transform duration-300 ease-out"
+        id="aboutUsContent"
+      >
+        <div class="text-sm uppercase tracking-widest text-gray-600 mb-8">
           About Us
         </div>
         <h2
-          class="text-3xl sm:text-4xl md:text-5xl font-light text-[#153040] mb-8 leading-snug"
+          class="text-3xl sm:text-4xl md:text-5xl font-thin text-[#153040] mb-8"
+          style="line-height: 1.4;"
         >
-          Catering is our passion and our DNA.<br />
-          Thanks to a craftsman's spirit and industrial know-how, we know how to
-          build your complete system, from small establishments to large-scale distribution.
+          Catering is our passion and our DNA, thanks to a craftsman's spirit
+          and industrial know-how, we know how to build your complete system,
+          from small establishments to large-scale distribution.
         </h2>
       </div>
     </section>
     <!--BUISINESS MODEL SECTION -->
-    <section class="py-16 bg-white flex justify-center">
-      <div class="w-full max-w-full px-0 lg:mx-16 2xl:mx-32">
+    <section class="py-16 flex justify-center">
+      <div
+        class="w-full max-w-full px-0 lg:mx-16 2xl:mx-32 transform transition-transform duration-300 ease-out"
+        id="businessAreasContent"
+      >
         <div class="text-center mb-12">
           <div class="text-base uppercase tracking-widest text-[#153040] mb-2">
             Business Areas
@@ -579,5 +689,70 @@ import SwiperBusinessAreas from "../components/SwiperBusinessAreas.vue";
         });
       });
     }
+
+    // Crossfade background images
+    const bgImages =
+      document.querySelectorAll<HTMLImageElement>(".hero-bg-image");
+    let current = 0;
+    setInterval(() => {
+      bgImages.forEach((img, idx) => {
+        img.style.opacity = idx === current ? "1" : "0";
+      });
+      current = (current + 1) % bgImages.length;
+    }, 4000); // Change every 4 seconds
+
+    // Rubber band scroll effect for About Us section
+    const aboutUsContent = document.getElementById("aboutUsContent");
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+
+    window.addEventListener("scroll", () => {
+      lastScrollY = window.scrollY;
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const aboutUsSection = aboutUsContent?.closest("section");
+          if (aboutUsSection) {
+            const rect = aboutUsSection.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom > 0) {
+              const scrollProgress =
+                (window.innerHeight - rect.top) / window.innerHeight;
+              const translateY = Math.sin(scrollProgress * Math.PI) * 100;
+              if (aboutUsContent) {
+                aboutUsContent.style.transform = `translateY(${translateY}px)`;
+              }
+            }
+          }
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
+
+    // Rubber band scroll effect for Business Areas section
+    const businessAreasContent = document.getElementById(
+      "businessAreasContent"
+    );
+    let businessAreasTicking = false;
+
+    window.addEventListener("scroll", () => {
+      if (!businessAreasTicking) {
+        window.requestAnimationFrame(() => {
+          const businessAreasSection = businessAreasContent?.closest("section");
+          if (businessAreasSection) {
+            const rect = businessAreasSection.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom > 0) {
+              const scrollProgress =
+                (window.innerHeight - rect.top) / window.innerHeight;
+              const translateY = Math.sin(scrollProgress * Math.PI) * 100;
+              if (businessAreasContent) {
+                businessAreasContent.style.transform = `translateY(${translateY}px)`;
+              }
+            }
+          }
+          businessAreasTicking = false;
+        });
+        businessAreasTicking = true;
+      }
+    });
   });
 </script>

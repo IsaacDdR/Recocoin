@@ -20,7 +20,7 @@ const { title } = Astro.props;
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <title>{title}</title>
@@ -46,5 +46,31 @@ const { title } = Astro.props;
       "Open Sans",
       "Helvetica Neue",
       sans-serif;
+  }
+
+  @keyframes gradient-shift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  body {
+    background: linear-gradient(
+      120deg,
+      #ffffff 0%,
+      #e2e8f0 25%,
+      #94a3b8 50%,
+      #e2e8f0 75%,
+      #ffffff 100%
+    );
+    background-size: 200% 200%;
+    animation: gradient-shift 15s ease infinite;
+    min-height: 100vh;
   }
 </style>

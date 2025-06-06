@@ -95,16 +95,17 @@ import "swiper/css";
 import "swiper/css/pagination";
 </script>
 
-<script type="module">
+<script>
 if (typeof window !== "undefined") {
-  import("simple-parallax-js").then(({ default: simpleParallax }) => {
+  document.addEventListener("DOMContentLoaded", () => {
     const images = document.querySelectorAll(".parallax-bg");
     if (images.length) {
-      new simpleParallax(images, {
-        scale: 1.1,
-        delay: 0.2,
-        transition: "cubic-bezier(0,0,0,1)",
-        orientation: "up",
+      window.addEventListener("scroll", () => {
+        const scrolled = window.scrollY;
+        images.forEach((image) => {
+          const speed = 0.5;
+          image.style.transform = `translateY(${scrolled * speed}px)`;
+        });
       });
     }
   });
