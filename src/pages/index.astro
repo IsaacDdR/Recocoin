@@ -8,7 +8,7 @@ import cocinaHeader4 from "../assets/img/cocina-header-4.jpg";
 import cocinaHeader5 from "../assets/img/cocina-header-5.png";
 import cocinaHeader6 from "../assets/img/cocina-header-6.png";
 import cocinaHeader7 from "../assets/img/cocina-header-7.png";
-import cocinaHeader8 from "../assets/img/cocina-header-8.png";
+import cocinaHeader8 from "../assets/img/cocina-header-8.jpg";
 import rhinoLogo from "../assets/svg/rhino-logo.svg";
 import criotecLogo from "../assets/svg/criotec-logo.svg";
 import metalfrioLogo from "../assets/svg/metalfrio-logo.svg";
@@ -16,6 +16,7 @@ import vencortLogo from "../assets/img/vencort.png";
 import loboLogo from "../assets/img/lobo-logo.jpg";
 import logo40 from "../assets/img/40-logo.png";
 import SwiperBusinessAreas from "../components/SwiperBusinessAreas.vue";
+import { gsap } from "gsap";
 ---
 
 <style>
@@ -159,6 +160,63 @@ import SwiperBusinessAreas from "../components/SwiperBusinessAreas.vue";
     }
   }
 
+  @keyframes fire-glow {
+    0%,
+    100% {
+      text-shadow: none;
+    }
+    50% {
+      text-shadow: none;
+    }
+  }
+
+  @keyframes ice-glow {
+    0%,
+    100% {
+      text-shadow: none;
+    }
+    50% {
+      text-shadow: none;
+    }
+  }
+
+  @keyframes fire-effect {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+
+  @keyframes fire-ice-transition {
+    0%,
+    100% {
+      opacity: 1;
+      background-position: 0% 50%;
+    }
+    45% {
+      opacity: 1;
+      background-position: 0% 50%;
+    }
+    50% {
+      opacity: 0;
+      background-position: 0% 50%;
+    }
+    55% {
+      opacity: 0;
+      background-position: 100% 50%;
+    }
+    60% {
+      opacity: 1;
+      background-position: 100% 50%;
+    }
+    95% {
+      opacity: 1;
+      background-position: 100% 50%;
+    }
+  }
+
   .animate-color-shift {
     background: linear-gradient(
       90deg,
@@ -269,6 +327,36 @@ import SwiperBusinessAreas from "../components/SwiperBusinessAreas.vue";
     animation: fadeInUp 1s ease-out forwards;
   }
 
+  .animate-fire-effect {
+    background: linear-gradient(90deg, #ff4500, #ff8c00, #ff4500, #ff8c00);
+    background-size: 200% auto;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: fire-effect 3s linear infinite;
+    display: inline-block;
+  }
+
+  .animate-fire-ice-transition {
+    background: linear-gradient(
+      90deg,
+      #ff4500,
+      #ff8c00,
+      #ff4500,
+      #ff8c00,
+      #1e90ff,
+      #00bfff,
+      #1e90ff,
+      #00bfff
+    );
+    background-size: 200% auto;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: fire-ice-transition 8s ease-in-out infinite;
+    display: inline-block;
+  }
+
   .parallax-bg {
     background-attachment: fixed;
     background-size: cover;
@@ -303,6 +391,14 @@ import SwiperBusinessAreas from "../components/SwiperBusinessAreas.vue";
     );
     background-size: 200% 200%;
     animation: gradient-shift 15s ease infinite;
+  }
+
+  .fire-state {
+    animation: fire-glow 2s ease-in-out infinite;
+  }
+
+  .ice-state {
+    animation: ice-glow 2s ease-in-out infinite;
   }
 </style>
 
@@ -361,23 +457,26 @@ import SwiperBusinessAreas from "../components/SwiperBusinessAreas.vue";
         style="z-index: 0;"
         data-bg-index="6"
       />
+      <img
+        src={cocinaHeader8.src}
+        alt="Hero Background 8"
+        class="absolute inset-0 w-full h-full object-cover parallax-bg hero-bg-image opacity-0 transition-opacity duration-1000"
+        style="z-index: 0;"
+        data-bg-index="7"
+      />
       <div
-        class="absolute inset-0 bg-gradient-to-b from-gray-900/70 via-gray-800/80 to-gray-900/100"
+        class="absolute inset-0 bg-gradient-to-b from-transparent via-gray-800/65 to-gray-900/90"
       >
       </div>
       <div
-        class="relative z-10 max-w-4xl mx-auto px-8 sm:px-6 text-left -mt-24 sm:mt-0 flex flex-col justify-center h-full"
+        class="relative z-10 max-w-4xl mx-auto px-8 sm:px-6 text-left -mt-24 sm:mt-0 lg:mt-24 flex flex-col justify-center h-full"
       >
         <h1
-          class="text-white font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.2] sm:leading-[1.1] mb-6 sm:mb-8 tracking-[-0.02em] font-sans [text-shadow:_0_2px_3px_rgba(0,0,0,0.25)] uppercase"
+          class="text-white font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.2] sm:leading-[1.1] mb-6 sm:mb-8 tracking-[-0.02em] font-sans uppercase [filter:drop-shadow(0_0_6px_rgba(0,0,0,0.6))]"
         >
-          <span
-            class="animate-color-shift [text-shadow:_0_2px_3px_rgba(0,0,0,0.25)]"
-            >INFRAESTRUCTURA</span
-          > TÉRMICA PARA LA
-          <span
-            class="animate-color-shift-reverse [text-shadow:_0_2px_3px_rgba(0,0,0,0.25)]"
-            >INDUSTRIA</span
+          <span class="text-white">INFRAESTRUCTURA</span><br />
+          <span id="termica-text" class="text-white">TÉRMICA</span> PARA LA <span
+            class="text-white">INDUSTRIA</span
           >
         </h1>
         <p
@@ -677,6 +776,8 @@ import SwiperBusinessAreas from "../components/SwiperBusinessAreas.vue";
 </IndexLayout>
 
 <script>
+  import { gsap } from "gsap";
+
   document.addEventListener("DOMContentLoaded", () => {
     const images = document.querySelectorAll<HTMLImageElement>(".parallax-bg");
     if (images.length) {
@@ -754,5 +855,90 @@ import SwiperBusinessAreas from "../components/SwiperBusinessAreas.vue";
         businessAreasTicking = true;
       }
     });
+
+    // Fire and Ice animation for TÉRMICA
+    const termicaText = document.getElementById("termica-text");
+
+    const fireColors = ["#ff4500", "#ff4500", "#ff8c00", "#ff4500", "#ff4500"];
+    const iceColors = ["#1e90ff", "#1e90ff", "#00bfff", "#1e90ff", "#1e90ff"];
+
+    function animateFireIce() {
+      // Start with white text
+      gsap.set(termicaText, {
+        color: "#ffffff",
+        backgroundImage: "none",
+        WebkitBackgroundClip: "none",
+        backgroundClip: "none",
+      });
+
+      // After 1 second, transition to fire
+      gsap.delayedCall(1, () => {
+        gsap.to(termicaText, {
+          backgroundImage: `linear-gradient(90deg, ${fireColors.join(", ")})`,
+          backgroundSize: "200% auto",
+          WebkitBackgroundClip: "text",
+          backgroundClip: "text",
+          color: "transparent",
+          duration: 1.2,
+          ease: "power2.inOut",
+          onStart: () => {
+            // Animate the fire gradient position
+            gsap.to(termicaText, {
+              backgroundPosition: "200% 50%",
+              duration: 2,
+              ease: "sine.inOut",
+              repeat: -1,
+              yoyo: true,
+            });
+          },
+        });
+
+        // After 3 seconds of fire, slowly fade back to white
+        gsap.delayedCall(3, () => {
+          gsap.to(termicaText, {
+            color: "#ffffff",
+            duration: 1.5,
+            ease: "power2.inOut",
+          });
+
+          // After 1 second of white, transition to ice
+          gsap.delayedCall(1, () => {
+            gsap.to(termicaText, {
+              backgroundImage: `linear-gradient(90deg, ${iceColors.join(", ")})`,
+              WebkitBackgroundClip: "text",
+              backgroundClip: "text",
+              color: "transparent",
+              duration: 1.2,
+              ease: "power2.inOut",
+              onStart: () => {
+                // Animate the ice gradient position
+                gsap.to(termicaText, {
+                  backgroundPosition: "200% 50%",
+                  duration: 2,
+                  ease: "sine.inOut",
+                  repeat: -1,
+                  yoyo: true,
+                });
+              },
+            });
+
+            // After 3 seconds of ice, slowly fade back to white
+            gsap.delayedCall(3, () => {
+              gsap.to(termicaText, {
+                color: "#ffffff",
+                duration: 1.5,
+                ease: "power2.inOut",
+                onComplete: () => {
+                  // After 1 second of white, restart the cycle
+                  gsap.delayedCall(1, animateFireIce);
+                },
+              });
+            });
+          });
+        });
+      });
+    }
+
+    animateFireIce();
   });
 </script>
