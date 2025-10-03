@@ -1,0 +1,73 @@
+---
+import rhinoLogo from "../assets/svg/rhino-logo.svg";
+import criotecLogo from "../assets/svg/criotec-logo.svg";
+import metalfrioLogo from "../assets/svg/metalfrio-logo.svg";
+import vencortLogo from "../assets/img/vencort.png";
+import loboLogo from "../assets/img/lobo-logo.jpg";
+import logo40 from "../assets/img/40-logo.png";
+import { Image } from "astro:assets"; 
+---
+
+<template>
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-5">
+        <h2
+          class="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-12"
+        >
+          Marcas que distribuimos
+        </h2>
+        <div
+          class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center justify-items-center"
+        >
+          <div
+            class="w-24 sm:w-32 h-12 sm:h-16 flex items-center justify-center"
+          >
+            <Image
+              src={rhinoLogo}
+              alt="Rhino"
+              class="w-24 sm:w-32 h-12 sm:h-16"
+            />
+          </div>
+          <div
+            class="w-24 sm:w-32 h-12 sm:h-16 flex items-center justify-center"
+          >
+            <Image
+              src={criotecLogo}
+              alt="Criotec"
+              class="w-24 sm:w-32 h-12 sm:h-16"
+            />
+          </div>
+          <div
+            class="w-24 sm:w-32 h-12 sm:h-16 flex items-center justify-center"
+          >
+            <Image
+              src={metalfrioLogo}
+              alt="Metalfrio"
+              class="w-24 sm:w-32 h-12 sm:h-16"
+            />
+          </div>
+          <div
+            class="w-24 sm:w-32 h-12 sm:h-16 flex items-center justify-center"
+          >
+            <Image
+              src={vencortLogo}
+              alt="Vencort"
+              class="w-24 sm:w-32 h-12 sm:h-16"
+            />
+          </div>
+          <div
+            class="w-24 sm:w-32 h-24 sm:h-32 flex items-center justify-center"
+          >
+            <Image
+              src={loboLogo}
+              alt="Lobo"
+              class="w-24 sm:w-32 h-24 sm:h-32"
+            />
+          </div>
+          <div class="flex items-center justify-center">
+            <Image src={logo40} alt="40" class="w-16" />
+          </div>
+        </div>
+      </div>
+    </section>
+</template>

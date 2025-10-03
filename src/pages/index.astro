@@ -1,6 +1,5 @@
 ---
 import IndexLayout from "../layouts/IndexLayout.astro";
-import { Image } from "astro:assets";
 import cocinaHeader from "../assets/img/cocina-header.jpg";
 import cocinaHeader2 from "../assets/img/cocina-header-2.jpg";
 import cocinaHeader3 from "../assets/img/cocina-header-3.jpg";
@@ -9,14 +8,17 @@ import cocinaHeader5 from "../assets/img/cocina-header-5.png";
 import cocinaHeader6 from "../assets/img/cocina-header-6.png";
 import cocinaHeader7 from "../assets/img/cocina-header-7.png";
 import cocinaHeader8 from "../assets/img/cocina-header-8.jpg";
+
+import SwiperBusinessAreas from "../components/SwiperBusinessAreas.vue";
+import Contact from "../components/Contact.vue";
+import Marcas from "../components/Marcas.astro";
 import rhinoLogo from "../assets/svg/rhino-logo.svg";
 import criotecLogo from "../assets/svg/criotec-logo.svg";
 import metalfrioLogo from "../assets/svg/metalfrio-logo.svg";
 import vencortLogo from "../assets/img/vencort.png";
 import loboLogo from "../assets/img/lobo-logo.jpg";
 import logo40 from "../assets/img/40-logo.png";
-import SwiperBusinessAreas from "../components/SwiperBusinessAreas.vue";
-import { gsap } from "gsap";
+import { Image } from "astro:assets"; 
 ---
 
 <style>
@@ -508,7 +510,7 @@ import { gsap } from "gsap";
       </div>
     </section>
     <!-- ABOUT US SECTION -->
-    <section class="w-full py-40 flex items-center justify-center">
+    <section class="w-full py-20 flex items-center justify-center">
       <div
         class="max-w-4xl mx-auto px-6 text-center transform transition-transform duration-300 ease-out"
         id="aboutUsContent"
@@ -528,14 +530,14 @@ import { gsap } from "gsap";
       </div>
     </section>
     <!--BUISINESS MODEL SECTION -->
-    <section class="py-16 flex justify-center">
+    <section class="flex justify-center">
       <div
         class="w-full max-w-full px-0 lg:mx-16 2xl:mx-32 transform transition-transform duration-300 ease-out"
         id="businessAreasContent"
       >
         <div class="text-center mb-12">
           <div class="text-base uppercase tracking-widest text-[#153040] mb-2">
-            Business Areas
+            AREAS DE NEGOCIO
           </div>
         </div>
         <!-- Mobile Swiper -->
@@ -614,9 +616,9 @@ import { gsap } from "gsap";
     </section>
     <!--BENEFICIOS -->
     <section class="text-gray-600 body-font">
-      <div class="container px-5 py-12 lg:py-12 mx-auto">
+    <div class="container px-5 py-12 lg:py-32 mx-auto">
         <!--
-        <h1
+        <h1       
           class="text-3xl font-medium title-font text-center text-gray-900 mb-20 lg:sm:text-5xl lg:text-4xl lg:font-bold lg:mb-24"
         >
           Beneficios que marcan la diferencia
@@ -715,7 +717,7 @@ import { gsap } from "gsap";
       </div>
     </section>
     <!--INTRO MARCAS -->
-    <section class="py-12 bg-white">
+<section class="py-20 bg-white">
       <div class="container mx-auto px-5">
         <h2
           class="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-12"
@@ -776,6 +778,8 @@ import { gsap } from "gsap";
         </div>
       </div>
     </section>
+    <Marcas />
+    <Contact />
     <!-- CONTENT -->
   </main>
 </IndexLayout>
