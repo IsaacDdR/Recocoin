@@ -10,7 +10,7 @@
         <div class="flex items-center">
           <img
             class="h-12 sm:h-16 md:h-20 lg:h-24 w-auto"
-            src="/Recocoin/assets/svg/recocoin-logo.svg"
+            src="/assets/svg/recocoin-logo.svg"
             alt="Recocoin Logo"
           />
         </div>
