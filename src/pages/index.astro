@@ -19,6 +19,7 @@ import vencortLogo from "../assets/img/vencort.png";
 import loboLogo from "../assets/img/lobo-logo.jpg";
 import logo40 from "../assets/img/40-logo.png";
 import { Image } from "astro:assets"; 
+import WaButton from "../components/WaButton.vue";
 ---
 
 <style>
@@ -552,9 +553,9 @@ import { Image } from "astro:assets";
             class="bg-black p-12 flex flex-col justify-between h-full min-h-[500px]"
           >
             <div>
-              <h3 class="text-white text-2xl font-light mb-4">Restaurants</h3>
+              <h3 class="text-white text-2xl font-light mb-4">Refrigeración comercial</h3>
               <p class="text-white text-base font-light mb-8">
-                Discover our tools for a highly profitable kitchen.
+                Infraestructura para tu negocio.
               </p>
             </div>
             <img
@@ -567,10 +568,9 @@ import { Image } from "astro:assets";
             class="bg-black p-12 flex flex-col justify-between h-full min-h-[500px]"
           >
             <div>
-              <h3 class="text-white text-2xl font-light mb-4">High Cuisine</h3>
+              <h3 class="text-white text-2xl font-light mb-4">Cocinas industriales</h3>
               <p class="text-white text-base font-light mb-8">
-                Discover the most suitable solutions for even the most demanding
-                chef.
+                Lo mejor para la alta producción
               </p>
             </div>
             <img
@@ -584,10 +584,10 @@ import { Image } from "astro:assets";
           >
             <div>
               <h3 class="text-white text-2xl font-light mb-4">
-                Fast Casual Food
+                Básculas y Maquinaria
               </h3>
               <p class="text-white text-base font-light mb-8">
-                From franchise formats to replicable cooking.
+                Alta maquinaria de todo tipo
               </p>
             </div>
             <img
@@ -600,9 +600,9 @@ import { Image } from "astro:assets";
             class="bg-black p-12 flex flex-col justify-between h-full min-h-[500px]"
           >
             <div>
-              <h3 class="text-white text-2xl font-light mb-4">Design</h3>
+              <h3 class="text-white text-2xl font-light mb-4">Refacciones</h3>
               <p class="text-white text-base font-light mb-8">
-                Discover the tools to support your professionalism.
+                Todo lo que necesitas para mantener tu equipo funcionando
               </p>
             </div>
             <img
@@ -645,7 +645,7 @@ import { Image } from "astro:assets";
               <h2
                 class="text-gray-900 text-lg title-font font-medium mb-2 lg:text-2xl lg:font-bold lg:mb-4"
               >
-                Calidad y Durabilidad:
+                Calidad y Durabilidad
               </h2>
               <p class="leading-relaxed text-base lg:text-lg">
                 Equipos diseñados para un rendimiento eficiente y una larga vida
@@ -676,7 +676,7 @@ import { Image } from "astro:assets";
               <h2
                 class="text-gray-900 text-lg title-font font-medium mb-2 lg:text-2xl lg:font-bold lg:mb-4"
               >
-                Asesoría Personalizada:
+                Asesoría Personalizada
               </h2>
               <p class="leading-relaxed text-base lg:text-lg">
                 Te guiamos en cada paso para que encuentres la mejor solución
@@ -705,7 +705,7 @@ import { Image } from "astro:assets";
               <h2
                 class="text-gray-900 text-lg title-font font-medium mb-2 lg:text-2xl lg:font-bold lg:mb-4"
               >
-                Garantía:
+                Garantía
               </h2>
               <p class="leading-relaxed text-base lg:text-lg">
                 Nos aseguramos de que tus equipos funcionen siempre de manera
@@ -779,7 +779,13 @@ import { Image } from "astro:assets";
       </div>
     </section>
     <Marcas />
-    <Contact />
+    <Contact client:only/>
+    <WaButton
+      phone="4271302645"
+      message="Quisiera obtener más información."
+      iconColor="#ffffff"
+      backgroundColor="#25D366"
+    / >
     <!-- CONTENT -->
   </main>
 </IndexLayout>

@@ -12,9 +12,9 @@
           class="bg-black p-12 pb-24 flex flex-col justify-between h-full min-h-[500px] max-w-xs mx-auto"
         >
           <div>
-            <h3 class="text-white text-2xl font-light mb-4">Restaurants</h3>
+            <h3 class="text-white text-2xl font-light mb-4">Refrigeración Industrial</h3>
             <p class="text-white text-base font-light mb-8">
-              Discover our tools for a highly profitable kitchen.
+                Infraestructura para tu negocio.
             </p>
           </div>
           <img
@@ -31,10 +31,9 @@
           class="bg-black p-12 pb-24 flex flex-col justify-between h-full min-h-[500px] max-w-xs mx-auto"
         >
           <div>
-            <h3 class="text-white text-2xl font-light mb-4">High Cuisine</h3>
+            <h3 class="text-white text-2xl font-light mb-4">Cocinas industriales</h3>
             <p class="text-white text-base font-light mb-8">
-              Discover the most suitable solutions for even the most demanding
-              chef.
+              Lo mejor para la alta producción
             </p>
           </div>
           <img
@@ -52,10 +51,11 @@
         >
           <div>
             <h3 class="text-white text-2xl font-light mb-4">
-              Fast Casual Food
+              Básculas y Maquinaria
+
             </h3>
             <p class="text-white text-base font-light mb-8">
-              From franchise formats to replicable cooking.
+              Alta maquinaria de todo tipo
             </p>
           </div>
           <img
