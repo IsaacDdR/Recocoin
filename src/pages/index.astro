@@ -20,6 +20,7 @@ import loboLogo from "../assets/img/lobo-logo.jpg";
 import logo40 from "../assets/img/40-logo.png";
 import { Image } from "astro:assets"; 
 import WaButton from "../components/WaButton.vue";
+const whatsAppLink = "https://wa.me/524271302645?text=Hola,%20quiero%20más%20información%20sobre%20Recocoin.";
 ---
 
 <style>
@@ -495,18 +496,22 @@ import WaButton from "../components/WaButton.vue";
         <div
           class="flex flex-col sm:flex-row gap-8 justify-center sm:justify-start items-center sm:items-start mt-4 sm:mt-8"
         >
+        <a href={whatsAppLink}>
           <button
-            type="button"
-            class="group relative overflow-hidden animate-button-gradient text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl min-w-[200px] flex items-center justify-center"
+          type="button"
+          class="group relative overflow-hidden animate-button-gradient text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl min-w-[200px] flex items-center justify-center"
           >
-            <span class="relative z-10">¡Hablemos!</span>
-          </button>
+          <span class="relative z-10">¡Hablemos!</span>
+        </button>
+      </a>
+      <!--No products yet 
           <button
             type="button"
             class="group relative overflow-hidden bg-transparent border-2 border-gray-400 text-white hover:bg-white hover:text-gray-900 font-semibold px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-105 min-w-[200px]"
           >
             <span class="relative z-10">Productos</span>
           </button>
+        -->
         </div>
       </div>
     </section>
@@ -781,8 +786,8 @@ import WaButton from "../components/WaButton.vue";
     <Marcas />
     <Contact client:only/>
     <WaButton
-      phone="4271302645"
-      message="Quisiera obtener más información."
+      phone="524271302645"
+      message="Quisiera obtener más información sobre Recocoin."
       iconColor="#ffffff"
       backgroundColor="#25D366"
     / >

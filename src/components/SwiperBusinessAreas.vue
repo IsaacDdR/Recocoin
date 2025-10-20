@@ -12,7 +12,7 @@
           class="bg-black p-12 pb-24 flex flex-col justify-between h-full min-h-[500px] max-w-xs mx-auto"
         >
           <div>
-            <h3 class="text-white text-2xl font-light mb-4">Refrigeración Industrial</h3>
+            <h3 class="text-white text-2xl font-light mb-4">Refrigeración comercial</h3>
             <p class="text-white text-base font-light mb-8">
                 Infraestructura para tu negocio.
             </p>
