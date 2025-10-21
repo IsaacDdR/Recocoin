@@ -50,7 +50,8 @@
           >
         --></nav>
 
-        <!-- Mobile menu button -->
+        <!-- Mobile menu button disabled until we get content -->
+         <!--
         <div class="sm:hidden">
           <button
             @click="isOpen = !isOpen"
@@ -59,7 +60,6 @@
             aria-expanded="false"
           >
             <span class="sr-only">Open main menu</span>
-            <!-- Menu icon -->
             <svg
               class="h-8 w-8"
               :class="{ hidden: isOpen, block: !isOpen }"
@@ -75,7 +75,6 @@
                 d="M4 6h16M4 12h16M4 18h16"
               />
             </svg>
-            <!-- Close icon -->
             <svg
               class="h-8 w-8"
               :class="{ hidden: !isOpen, block: isOpen }"
@@ -93,6 +92,7 @@
             </svg>
           </button>
         </div>
+      -->
       </div>
     </div>
 
