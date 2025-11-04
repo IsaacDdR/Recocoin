@@ -43,9 +43,9 @@ const { title } = Astro.props;
     <!-- Title is set by the <SEO /> component -->
   </head>
   <body>
-    <NavBar client:only="vue"/>
+    <NavBar client:load/>
     <slot />
-    <Footer client:only="vue"/>
+    <Footer client:visible/>
   </body>
 </html>
 <style is:global>
