@@ -1,6 +1,7 @@
 ---
 import NavBar from "../components/NavBar.vue";
 import Footer from "../components/Footer.vue";
+import { SEO } from "astro-seo";
 
 interface Props {
   title: string;
@@ -12,18 +13,34 @@ const { title } = Astro.props;
 <!doctype html>
 <html lang="en">
   <head>
+    <SEO  
+      title={title} 
+      description="Refrigeración Comercial y Cocinas industriales" 
+      canonical="https://recocoind.com.mx" 
+      openGraph={{
+        basic: {
+          title: title,
+          type: "website",
+          image: "/og-image.png",
+          url: "https://recocoind.com.mx",
+        },
+        optional: {
+          description: "Recocoin",
+        },
+      }}
+    /> 
     <meta charset="UTF-8" />
     <meta name="description" content="Recocoin" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
+    <meta name="generator" content={Astro.generator ?? "Astro"} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <title>{title}</title>
+    <!-- Title is set by the <SEO /> component -->
   </head>
   <body>
     <NavBar client:only="vue"/>
